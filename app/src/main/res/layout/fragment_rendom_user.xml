@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userdatas"
+            type="com.example.postdataproject.model.Result" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="200dp"
+            tools:context=".fragment.random.RandomFragment"
+            >
+
+
+
+            <TextView
+                android:id="@+id/txtresults"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="Results: "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txtgenders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="gender:"
+                app:layout_constraintEnd_toEndOf="@+id/txtresults"
+                app:layout_constraintStart_toStartOf="@id/txtresults"
+                app:layout_constraintTop_toBottomOf="@id/txtresults" />
+
+            <TextView
+                android:id="@+id/txtgender1s"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.gender)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtgenders"
+                app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{userdatas.name.title}"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/txtgenders"
+                app:layout_constraintStart_toStartOf="@id/txtgenders"
+                app:layout_constraintTop_toBottomOf="@id/txtgenders" />
+
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="title:"
+                app:layout_constraintEnd_toEndOf="@+id/txtname"
+                app:layout_constraintStart_toStartOf="@id/txtname"
+                app:layout_constraintTop_toBottomOf="@id/txtname" />
+
+
+            <TextView
+                android:id="@+id/txttitle1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text=""
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txttitle"
+                app:layout_constraintTop_toBottomOf="@+id/txtname" />
+
+
+
+            <TextView
+                android:id="@+id/txtfirst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="first:"
+                app:layout_constraintEnd_toEndOf="@+id/txttitle"
+                app:layout_constraintStart_toStartOf="@id/txttitle"
+                app:layout_constraintTop_toBottomOf="@id/txttitle" />
+
+
+            <TextView
+                android:id="@+id/txtfirst1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.name.first)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtfirst"
+                app:layout_constraintTop_toBottomOf="@+id/txttitle1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtfirst2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.name.first)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtfirst"
+                app:layout_constraintTop_toBottomOf="@+id/txttitle1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtfirst3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.name.first)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtfirsts"
+                app:layout_constraintTop_toBottomOf="@+id/txtfirst1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtfirsts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="first:"
+                app:layout_constraintEnd_toEndOf="@+id/txtfirst"
+                app:layout_constraintStart_toStartOf="@+id/txtfirst"
+                app:layout_constraintTop_toBottomOf="@+id/txtfirst" />
+
+
+
+
+            <TextView
+                android:id="@+id/txtlast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="last:"
+                app:layout_constraintEnd_toEndOf="@+id/txtfirst"
+                app:layout_constraintStart_toStartOf="@id/txtfirst"
+                app:layout_constraintTop_toBottomOf="@id/txtfirst" />
+
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.name.last)}"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtlast"
+                app:layout_constraintTop_toBottomOf="@+id/txtfirst1" />
+
+            <TextView
+                android:id="@+id/txtlocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="location:"
+                app:layout_constraintEnd_toEndOf="@+id/txtlast"
+                app:layout_constraintStart_toStartOf="@id/txtlast"
+                app:layout_constraintTop_toBottomOf="@id/txtlast" />
+
+            <TextView
+                android:id="@+id/txtstreet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="street:"
+                app:layout_constraintEnd_toEndOf="@+id/txtlocation"
+                app:layout_constraintStart_toStartOf="@id/txtlocation"
+                app:layout_constraintTop_toBottomOf="@id/txtlocation"/>
+
+
+
+            <TextView
+                android:id="@+id/txtnumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="number:"
+                app:layout_constraintEnd_toEndOf="@+id/txtstreet"
+                app:layout_constraintStart_toStartOf="@id/txtstreet"
+                app:layout_constraintTop_toBottomOf="@id/txtstreet"/>
+
+            <TextView
+                android:id="@+id/txtnumber1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.location.street.number)}"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtstreet"
+                app:layout_constraintTop_toBottomOf="@+id/txtstreet" />
+
+
+
+            <TextView
+                android:id="@+id/txtnamel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="name:"
+                app:layout_constraintEnd_toEndOf="@+id/txtnumber"
+                app:layout_constraintStart_toStartOf="@id/txtnumber"
+                app:layout_constraintTop_toBottomOf="@id/txtnumber"/>
+
+            <TextView
+                android:id="@+id/txtnamel1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.location.street.name)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtnamel"
+                app:layout_constraintTop_toBottomOf="@+id/txtnumber" />
+
+
+
+            <TextView
+                android:id="@+id/txtcity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="city:"
+                app:layout_constraintEnd_toEndOf="@+id/txtnamel"
+                app:layout_constraintStart_toStartOf="@id/txtnamel"
+                app:layout_constraintTop_toBottomOf="@id/txtnamel"/>
+
+            <TextView
+                android:id="@+id/txtcity1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.location.city)}"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtcity"
+                app:layout_constraintTop_toBottomOf="@+id/txtnamel1" />
+
+
+            <TextView
+                android:id="@+id/txtstate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="state:"
+                app:layout_constraintEnd_toEndOf="@+id/txtcity"
+                app:layout_constraintStart_toStartOf="@id/txtcity"
+                app:layout_constraintTop_toBottomOf="@id/txtcity"/>
+
+            <TextView
+                android:id="@+id/txtstate1s"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.location.state)}"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtstate"
+                app:layout_constraintTop_toBottomOf="@+id/txtcity1" />
+
+            <TextView
+                android:id="@+id/txtcountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="country:"
+                app:layout_constraintEnd_toEndOf="@+id/txtstate"
+                app:layout_constraintStart_toStartOf="@id/txtstate"
+                app:layout_constraintTop_toBottomOf="@id/txtstate"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.location.country)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtcountry"
+                app:layout_constraintTop_toBottomOf="@+id/txtstate1s" />
+
+
+                        <TextView
+                android:id="@+id/txtposts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="postcode:"
+                app:layout_constraintEnd_toEndOf="@+id/txtcountry"
+                app:layout_constraintStart_toStartOf="@id/txtcountry"
+                app:layout_constraintTop_toBottomOf="@id/txtcountry"/>
+
+            <TextView
+                android:id="@+id/txtpost1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:text="@{String.valueOf(userdatas.location.postcode)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/txtposts"
+                app:layout_constraintTop_toBottomOf="@+id/txtcountry" />
+
+
+
+            <TextView
+                android:id="@+id/txtcors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="cordinates:"
+                app:layout_constraintEnd_toEndOf="@+id/txtposts"
+                app:layout_constraintStart_toStartOf="@id/txtposts"
+                app:layout_constraintTop_toBottomOf="@id/txtposts"/>
+
+
+            <TextView
+                android:id="@+id/txtlat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="latitude:"
+                app:layout_constraintEnd_toEndOf="@+id/txtcors"
+                app:layout_constraintStart_toStartOf="@id/txtcors"
+                app:layout_constraintTop_toBottomOf="@id/txtcors"/>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:loadImage="@{String.valueOf(userdatas.picture.large)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtlat"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                app:loadImage="@{String.valueOf(userdatas.picture.medium)}"
+
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/txtlat"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="192dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="0.587"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/txtpost1"
+                app:loadImage="@{String.valueOf(userdatas.picture.thumbnail)}"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+<!--            <include-->
+<!--                layout="@layout/itemuser"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/textView29"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/textView28"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView29" />-->
+
+
+
+
+
+
+
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="currentdata"
+            type="com.example.postdataproject.model.Randoms" />
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.cureentprice.CureentPricesFragment">
+
+    <TextView
+        android:id="@+id/texttime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:text="Time"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textupdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@{String.valueOf(currentdata.time.updated)}"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttime">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textISO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.time.updatedISO)}"
+
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/textupdated"
+        app:layout_constraintTop_toBottomOf="@+id/textupdated">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textUK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.time.updateduk)}"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/textISO"
+        app:layout_constraintTop_toBottomOf="@+id/textISO">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="ChartName"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUK">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textchar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@{String.valueOf(currentdata.chartName)}"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="bpi"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textchar">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@{String.valueOf(currentdata.bpi.USD.code)}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textsymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.USD.symbol)}"
+        app:layout_constraintStart_toStartOf="@+id/textcode"
+        app:layout_constraintTop_toBottomOf="@+id/textcode" />
+
+    <TextView
+        android:id="@+id/textrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.USD.rate)}"
+        app:layout_constraintStart_toStartOf="@+id/textsymbol"
+        app:layout_constraintTop_toBottomOf="@+id/textsymbol" />
+
+    <TextView
+        android:id="@+id/textdec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.USD.description)}"
+        app:layout_constraintStart_toStartOf="@+id/textrate"
+        app:layout_constraintTop_toBottomOf="@+id/textrate" />
+
+    <TextView
+        android:id="@+id/textratefloat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.USD.rateFloat)}"
+        app:layout_constraintStart_toStartOf="@+id/textdec"
+        app:layout_constraintTop_toBottomOf="@+id/textdec" />
+
+
+
+
+    <TextView
+        android:id="@+id/textGBS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="GBP"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textratefloat">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textcodeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:text="@{String.valueOf(currentdata.bpi.GBP.code)}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGBS" />
+
+    <TextView
+        android:id="@+id/textsymbolg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.GBP.symbol)}"
+        app:layout_constraintStart_toStartOf="@+id/textcodeg"
+        app:layout_constraintTop_toBottomOf="@+id/textcodeg" />
+
+    <TextView
+        android:id="@+id/textrateg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.GBP.rate)}"
+        app:layout_constraintStart_toStartOf="@+id/textsymbolg"
+        app:layout_constraintTop_toBottomOf="@+id/textsymbolg" />
+
+    <TextView
+        android:id="@+id/textdecg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.GBP.description)}"
+        app:layout_constraintStart_toStartOf="@+id/textrateg"
+        app:layout_constraintTop_toBottomOf="@+id/textrateg" />
+
+    <TextView
+        android:id="@+id/textratefloatg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@{String.valueOf(currentdata.bpi.GBP.rateFloat)}"
+        app:layout_constraintStart_toStartOf="@+id/textdecg"
+        app:layout_constraintTop_toBottomOf="@+id/textdecg" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="EUR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textratefloatg" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="@{String.valueOf(currentdata.bpi.EUR.code)}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@{String.valueOf(currentdata.bpi.EUR.symbol)}"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@{String.valueOf(currentdata.bpi.EUR.rate)}"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="@{String.valueOf(currentdata.bpi.EUR.description)}"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@{String.valueOf(currentdata.bpi.EUR.rateFloat)}"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

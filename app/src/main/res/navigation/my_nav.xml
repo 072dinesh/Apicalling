@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.postdataproject.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cureentPricesFragment"
+            app:destination="@id/cureentPricesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_univarcityFragment"
+            app:destination="@id/univarcityFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rendomUserFragment"
+            app:destination="@id/rendomUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_usFragment"
+            app:destination="@id/usFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cocktailFragment"
+            app:destination="@id/cocktailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_congressMembersFragment"
+            app:destination="@id/congressMembersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_makeupBrandsFragment"
+            app:destination="@id/makeupBrandsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_wordpressFragment"
+            app:destination="@id/wordpressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cureentPricesFragment"
+        android:name="com.example.postdataproject.fragment.cureentprice.CureentPricesFragment"
+        android:label="CureentPricesFragment"
+        tools:layout="@layout/fragment_cureent_prices"
+        />
+    <fragment
+        android:id="@+id/univarcityFragment"
+        android:name="com.example.postdataproject.fragment.univarcity.UnivarcityFragment"
+        android:label="UnivarcityFragment"
+        tools:layout="@layout/fragment_univarcity"
+        />
+    <fragment
+        android:id="@+id/rendomUserFragment"
+        android:name="com.example.postdataproject.fragment.user.RendomUserFragment"
+        android:label="RendomUserFragment"
+        tools:layout="@layout/fragment_rendom_user"
+        />
+    <fragment
+        android:id="@+id/usFragment"
+        android:name="com.example.postdataproject.fragment.getusdata.UsFragment"
+        android:label="UsFragment"
+        tools:layout="@layout/fragment_us"
+        />
+    <fragment
+        android:id="@+id/cocktailFragment"
+        android:name="com.example.postdataproject.fragment.cocktaildatabase.CocktailFragment"
+        android:label="CocktailFragment"
+        tools:layout="@layout/fragment_cocktail"
+        />
+    <fragment
+        android:id="@+id/congressMembersFragment"
+        android:name="com.example.postdataproject.fragment.congressmembers.CongressMembersFragment"
+        android:label="CongressMembersFragment"
+        tools:layout="@layout/fragment_congress_members"
+        />
+    <fragment
+        android:id="@+id/makeupBrandsFragment"
+        android:name="com.example.postdataproject.fragment.makeupbrand.MakeupBrandsFragment"
+        android:label="MakeupBrandsFragment"
+        tools:layout="@layout/fragment_makeup_brands"
+        />
+    <fragment
+        android:id="@+id/wordpressFragment"
+        android:name="com.example.postdataproject.fragment.publicpostfromwordpress.WordpressFragment"
+        android:label="WordpressFragment"
+        tools:layout="@layout/fragment_wordpress"
+        />
+</navigation>
