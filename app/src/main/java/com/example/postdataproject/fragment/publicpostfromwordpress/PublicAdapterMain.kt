@@ -30,11 +30,11 @@ class PublicAdapterMain : RecyclerView.Adapter<PublicAdapterMain.MyViewHolder>()
 
             binding.itemword = currentItem
 
-            var chidadp = PublicAdapter()
-            binding.recyclerviewwp.layoutManager = LinearLayoutManager(binding.root.context,
-                LinearLayoutManager.HORIZONTAL,false)
-            binding.recyclerviewwp.adapter = chidadp
-            chidadp.setData(currentItem.links?.wpTerm?.filterNotNull() ?: emptyList())
+//            var chidadp = PublicAdapter()
+//            binding.recyclerviewwp.layoutManager = LinearLayoutManager(binding.root.context,
+//                LinearLayoutManager.HORIZONTAL,false)
+//            binding.recyclerviewwp.adapter = chidadp
+//            chidadp.setData(currentItem.links?.wpTerm?.filterNotNull() ?: emptyList())
 
 
         }

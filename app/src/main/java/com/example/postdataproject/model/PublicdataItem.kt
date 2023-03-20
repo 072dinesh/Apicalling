@@ -44,7 +44,7 @@ data class PublicdataItem(
     @SerializedName("premiumContent")
     val premiumContent: Boolean?,
     @SerializedName("premiumCutoffPercent")
-    val premiumCutoffPercent: Int?,
+    val premiumCutoffPercent: Double?,
     @SerializedName("primary_category")
     val primaryCategory: PrimaryCategory?,
     @SerializedName("rapidData")

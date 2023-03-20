@@ -4,15 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.postdataproject.databinding.ItemunivarsityBinding
 import com.example.postdataproject.databinding.ItemuslayoutBinding
 import com.example.postdataproject.model.Data
-import com.example.postdataproject.model.TestdataItem
 import com.example.postdataproject.util.DiffUtilExt
 
 
 
-class UsAdepter  : RecyclerView.Adapter<UsAdepter.MyViewHolder>() {
+class UsAdapter  : RecyclerView.Adapter<UsAdapter.MyViewHolder>() {
 
     //private var listData : List<GridViewData>?=null
 

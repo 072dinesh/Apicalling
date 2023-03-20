@@ -54,7 +54,7 @@ val base2 = "https://randomuser.me"
     ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(
-                //"https://api.coindesk.com"
+                "https://api.coindesk.com"
                 //base2
                 //baseUrl
                 //"http://universities.hipolabs.com"
@@ -62,7 +62,7 @@ val base2 = "https://randomuser.me"
                 //"https://www.thecocktaildb.com"
             //"https://house-stock-watcher-data.s3-us-west-2.amazonaws.com"
             //"http://makeup-api.herokuapp.com"
-            "https://techcrunch.com"
+            //"https://techcrunch.com"
 
 
             )

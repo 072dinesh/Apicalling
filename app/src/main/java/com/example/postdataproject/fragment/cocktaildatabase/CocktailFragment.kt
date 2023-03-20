@@ -9,12 +9,7 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.postdataproject.R
 import com.example.postdataproject.databinding.FragmentCocktailBinding
-import com.example.postdataproject.databinding.FragmentUsBinding
-import com.example.postdataproject.fragment.getusdata.SourceAdaper
-import com.example.postdataproject.fragment.getusdata.UsAdepter
-import com.example.postdataproject.fragment.getusdata.ViewModelus
 import com.example.postdataproject.model.Drink
 import com.example.postdataproject.util.NetworkResult
 import com.example.postdataproject.util.snackBar

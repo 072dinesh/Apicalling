@@ -2,37 +2,25 @@ package com.example.postdataproject.fragment.getusdata
 
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
-import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
-import com.example.postdataproject.R
-import com.example.postdataproject.databinding.FragmentUnivarcityBinding
 import com.example.postdataproject.databinding.FragmentUsBinding
-import com.example.postdataproject.fragment.univarcity.UnivarAdepter
-import com.example.postdataproject.fragment.univarcity.ViewModelUni
-import com.example.postdataproject.model.Data
-import com.example.postdataproject.model.TestdataItem
 import com.example.postdataproject.util.NetworkResult
 import com.example.postdataproject.util.snackBar
 import dagger.hilt.android.AndroidEntryPoint
-import okhttp3.internal.addHeaderLenient
-import timber.log.Timber
 import java.util.*
-import kotlin.collections.ArrayList
 
 @AndroidEntryPoint
 class UsFragment : Fragment() {
     private var _binding: FragmentUsBinding? = null
     private val binding get() = _binding!!
     private val viewmodelsecode: ViewModelus by viewModels()
-    private lateinit var adapter: UsAdepter
+    private lateinit var adapter: UsAdapter
     private lateinit var adapters: SourceAdaper
 
     private var lastquery = ""
@@ -56,7 +44,7 @@ class UsFragment : Fragment() {
 
 
     private fun setupUi() {
-        adapter = UsAdepter()
+        adapter = UsAdapter()
         adapters = SourceAdaper()
 //        // viewmodelsecode.getPost3()
 //        var list = ArrayList<Data>()

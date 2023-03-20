@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isGone
+import androidx.core.view.isInvisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 
@@ -63,10 +65,16 @@ class CureentPricesFragment : Fragment() {
 //                        binding.recyclerviewmain.hideShimmer() // to hide shimmer
 //                    } as Runnable, 3000)
 
+                   // binding.progressCircular.isGone
+                    binding.progressBar.visibility = View.VISIBLE
+
                 }
                 is NetworkResult.Success -> {
+                    //binding.progressCircular.isGone
+                    binding.progressBar.visibility = View.INVISIBLE
                     response.data?.let {
                         Log.e("DATA",it.toString())
+
                         binding.currentdata = response.data
                         //binding.currentdata = it?.first()
                     }

@@ -7,13 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.postdataproject.R
-import com.example.postdataproject.databinding.FragmentCocktailBinding
 import com.example.postdataproject.databinding.FragmentCongressMembersBinding
-import com.example.postdataproject.fragment.cocktaildatabase.CocktailAdapter
-import com.example.postdataproject.fragment.cocktaildatabase.ViewModelCocktail
-import com.example.postdataproject.fragment.getusdata.SourceAdaper
-import com.example.postdataproject.fragment.getusdata.UsAdepter
 import com.example.postdataproject.util.NetworkResult
 import com.example.postdataproject.util.snackBar
 import dagger.hilt.android.AndroidEntryPoint

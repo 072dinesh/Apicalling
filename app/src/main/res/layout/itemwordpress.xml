@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:text="@{Float.toString(itemword.id)}"
+                android:text="@{Integer.valueOf(itemword.id).toString()}"
 
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -117,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@{Integer.toString(itemword.author)}"
+                android:text="@{Float.valueOf(itemword.author).toString()}"
 
                 app:layout_constraintStart_toStartOf="@+id/textView83"
                 app:layout_constraintTop_toBottomOf="@+id/textView83" />
@@ -127,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="@{Integer.toString(itemword.featuredMedia)}"
+                android:text="@{Float.valueOf(itemword.featuredMedia).toString()}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView84"
                 app:layout_constraintStart_toEndOf="@+id/textView84"
                 app:layout_constraintTop_toTopOf="@+id/textView84" />
@@ -179,7 +179,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@{String.valueOf(itemword.authors)}"
                 app:layout_constraintStart_toStartOf="@+id/textView88"
                 app:layout_constraintTop_toBottomOf="@+id/textView88" />
 
@@ -188,7 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@{Integer.toString(itemword.primaryCategory.termId)}"
+                android:text="@{Float.valueOf(itemword.primaryCategory.termId).toString()}"
                 app:layout_constraintStart_toStartOf="@+id/textView89"
                 app:layout_constraintTop_toBottomOf="@+id/textView89" />
 
